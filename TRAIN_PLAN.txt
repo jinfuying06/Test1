@@ -1,0 +1,19 @@
+1. 모든 기능에 대한 테스트는 이루어져야함.
+2. 이후 동료검토 요청 필수
+요청시에는 동료검토대장을 작성한다.
+
+
+생성 때마다 채번 필요
+수련계획ID(TRAIN_PLAN_CD) TRAIN_PLAN(PK) 
+
+시작일 TRAIN_ST_TM TRAIN_PLAN_CURR -> 수련계획ID(TRAIN_PLAN_CD)로 INNER JOIN
+종료일 TRAIN_CLS_TM TRAIN_PLAN_CURR  -> 수련계획ID(TRAIN_PLAN_CD)로 INNER JOIN
+수련그룹 TRAIN_GRP_CD TRAN_GRP(PK) -> TRAIN_GRP_CD로 INNER JOIN? 
+수련계획제목 TRAIN_PLAN_TLT TRAIN_PLAN
+상세내용 TRAIN_PLAN_DTL TRAIN_PLAN
+비고 TRAIN_PLAN_DESC TRAIN_PLAN
+
+
+- 임시저장 : SAVE 상태
+- 등록 : SAVE 상태인 ID에서 수정하는 식인가?
+- 취소: NOT SAVE (R)
